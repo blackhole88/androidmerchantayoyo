@@ -1,0 +1,143 @@
+<resources>
+    <string name="app_name">Ayoyo Merchant</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyDxkD-RbYNfcc5feQyZASUuqNp2SVo_LNQ
+    </string>
+
+    <string name="introtext1">Sign up now!</string>
+    <string name="introdesc1">Where did you go today? we will be ready to drive anywhere and anytime</string>
+    <string name="introtext2">Trackable</string>
+    <string name="introdesc2">Keep track of your packages location and driver, real-time.</string>
+    <string name="introtext3">Speedy delivery</string>
+    <string name="introdesc3">You can stay productive while we pick up and drop off your package, all within hours!</string>
+
+    <string name="exit">Yakin mau keluar dari aplikasi ?</string>
+    <string name="yes">Ya!</string>
+    <string name="no">Tidak</string>
+    <string name="success">Berhasil</string>
+
+    <string name="email">Email</string>
+    <string name="verifydesc">We send a verification code to the number</string>
+    <string name="norecieve">I did not receive the code!</string>
+    <string name="resend">Resend Code</string>
+    <string name="confirm">Konfirmasi</string>
+    <string name="privacy">Dengan masuk aplikasi, anda setuju dengan <![CDATA[<b><font color=#6DC0FF>ketentuan yang berlaku</font></b>]]></string>
+    <string name="privacy_register">Dengan mendaftar aplikasi, anda setuju dengan <![CDATA[<b><font color=#6DC0FF>ketentuan yang berlaku</font></b>]]></string>
+
+    <string name="referal_code">Kode Referal</string>
+    <string name="address">Alamat</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="kota_atau_kab">kota / Kabupaten</string>
+    <string name="kecamatan">kecamatan</string>
+    <string name="lupa">Lupa Kata Sandi ?</string>
+    <string name="button_signIn">Masuk</string>
+    <string name="button_signUp"> Daftar</string>
+    <string name="button_dontHaveAccount">Tidak punya akun ? </string>
+    <string name="wrongnumber">Wrong phone number format </string>
+    <string name="phoneemailwrong">wrong phone or password</string>
+    <string name="phonepass">Phone and Password cannot be empty!</string>
+    <string name="phoneempty">Phone cannot be empty!</string>
+    <string name="passempty">Password cannot be empty!</string>
+    <string name="emailempty">Email cannot be empty!</string>
+    <string name="register">Daftar</string>
+    <string name="personal_detail">Data diri</string>
+    <string name="merchant_type">Tipe Merchant</string>
+    <string name="mechant_name">Nama Merchant</string>
+    <string name="select_service">Pilih Layanan</string>
+    <string name="change_image">Ubah Gambar</string>
+
+    <string name="hint_name">Nama</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Nomor Telepon</string>
+    <string name="hint_birthday">Tanggal Lahir</string>
+    <string name="hint_password">Kata sandi</string>
+    <string name="hint_identity_type">Jenis Kartu Identitas</string>
+    <string name="hint_identity_no">No Identitas</string>
+    <string name="hint_description">Deskripsi</string>
+
+    <string name="add_identity_images">Tambah foto identitas</string>
+    <string name="add_image">Tambahkan foto</string>
+    <string name="open_time">Jam Buka</string>
+    <string name="close_time">Jam Tutup</string>
+    <string name="location">Lokasi</string>
+    <string name="menu_store">Toko</string>
+    <string name="menu_menu">Menu</string>
+    <string name="menu_history">Riwayat</string>
+    <string name="menu_chat">Chat</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="getstarted">Get Started</string>
+    <string name="current_status">Statusmu sekarang</string>
+    <string name="set_open_or_close">Atur status buka/tutup</string>
+    <string name="detail">Detil</string>
+    <string name="withdraw">Tarik</string>
+    <string name="earning">Pendapatan</string>
+    <string name="daily">Harian</string>
+    <string name="monthly">Bulanan</string>
+    <string name="yearly">Tahunan</string>
+    <string name="wait">Tunggu...</string>
+    <string name="edit_owner">Ubah Pemilik</string>
+    <string name="edit_merchant">Ubah Merchant</string>
+    <string name="change_password">Ubah Kata Sandi</string>
+    <string name="about_us">Tentang Kami</string>
+    <string name="save">Simpan</string>
+    <string name="add_category">Tambah Kategori</string>
+    <string name="wallet">Dompet</string>
+    <string name="payment_method">Metode Pembayaran</string>
+    <string name="credit_card">Kartu Kredit</string>
+    <string name="creadit_card_method_desc">Topup dengan Master Card/VISA/JCB/Discover/Diners Club or American Express</string>
+    <string name="transfer_bank">Transfer Bank</string>
+    <string name="back">Kembali</string>
+    <string name="submit">Kirimkan</string>
+    <string name="no_data">Tidak Ada Data</string>
+    <string name="add_menu">Tambah Menu</string>
+    <string name="delete">Hapus</string>
+    <string name="delete_confirmation">Apa kamu yakin akan menghapusnya ?</string>
+    <string name="active_menu">Menu Aktif</string>
+    <string name="standart_price">Harga</string>
+    <string name="price_after_promo">Harga Promo</string>
+    <string name="edit_category">Ubah Kategori</string>
+
+    <string name="ride_location">Location</string>
+    <string name="ride_destination">Destination</string>
+
+    <string name="ride_note">Notes</string>
+
+    <string name="ride_setPickUp">Set PickUp</string>
+    <string name="ride_setDestination">Set Destination</string>
+    <string name="text_order">Order</string>
+    <string name="waiting_pleaseWait">Mohon tunggu....</string>
+    <string name="text_noInternet">No internet Access</string>
+
+    <string name="notification_cancel">Order has been canceled</string>
+    <string name="notification_start">start to destination</string>
+    <string name="notification_accept">pick up customers</string>
+    <string name="notification_finish">Order has been Finished</string>
+    <string name="waiting_desc">Waiting</string>
+
+    <string name="text_with_bullet">\u2022</string>
+
+    <string-array name="list_maximum">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>5000</item>
+        <item>10000</item>
+    </string-array>
+
+    <string-array name="gendertype">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="jobtype">
+        <item>Select Job</item>
+        <item>Ride</item>
+        <item>Car</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

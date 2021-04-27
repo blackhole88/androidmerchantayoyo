@@ -1,0 +1,25 @@
+workflows:
+  debug-build:
+    name: debug-build
+    scripts:
+      - name: Set up local properties
+        script: echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/local.properties"
+      - name: build debug version
+        script: ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/**/*.apk
+    triggering:
+      events:                           # List the events that trigger builds
+        - push
+      branch_patterns:                  # Define branch patterns
+        - pattern: 'master'
+          include: true
+          source: true
+    publishing:
+      email:
+        recipients:
+          - tfkbudi@gmail.com
+#          - holeblack624@gmail.com
+        notify:
+          success: true     
+          failure: false

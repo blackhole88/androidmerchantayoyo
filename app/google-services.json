@@ -1,0 +1,247 @@
+{
+  "project_info": {
+    "project_number": "103104407317",
+    "firebase_url": "https://ayoyo-user.firebaseio.com",
+    "project_id": "ayoyo-user",
+    "storage_bucket": "ayoyo-user.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103104407317:android:b5047d01d5fe156f78eb1c",
+        "android_client_info": {
+          "package_name": "com.ayoyo.ayoyo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103104407317-61ae8j4ktm67i05fbg24p0st7ei25kjl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayoyo.ayoyo",
+            "certificate_hash": "5ad34013bc4e703750476e06aa292e51c86e13f4"
+          }
+        },
+        {
+          "client_id": "103104407317-t8f8pg59q9burn3plnne1m679v4f64b1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayoyo.ayoyo",
+            "certificate_hash": "bba8fb4449af0dc36dd451e80f2c6c60936d3a03"
+          }
+        },
+        {
+          "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxkD-RbYNfcc5feQyZASUuqNp2SVo_LNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "103104407317-4tpmuqu7v2k5er27ha6l2o3l8ckm27if.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ayoyo.ayoyo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103104407317:android:79a4920025301a9f78eb1c",
+        "android_client_info": {
+          "package_name": "com.ayoyo.ayoyodriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103104407317-1dh3sd75pt4hcjuh174smothsackputm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayoyo.ayoyodriver",
+            "certificate_hash": "5ad34013bc4e703750476e06aa292e51c86e13f4"
+          }
+        },
+        {
+          "client_id": "103104407317-v0vujqkn4r9j33s0ivk2o3n5s7fpmb9t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayoyo.ayoyodriver",
+            "certificate_hash": "bba8fb4449af0dc36dd451e80f2c6c60936d3a03"
+          }
+        },
+        {
+          "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxkD-RbYNfcc5feQyZASUuqNp2SVo_LNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "103104407317-4tpmuqu7v2k5er27ha6l2o3l8ckm27if.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ayoyo.ayoyo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103104407317:android:389175a28e9102c778eb1c",
+        "android_client_info": {
+          "package_name": "com.ayoyo.merchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103104407317-c8mkhe5lundv71p5tig9d2ngbpjo66io.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayoyo.merchant",
+            "certificate_hash": "0924c0dd755c79d37db6fd520a02deee674f0b16"
+          }
+        },
+        {
+          "client_id": "103104407317-keh9m36lbd842r6eg6otkuiv7le3p69u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayoyo.merchant",
+            "certificate_hash": "d88f9eb21c546acfe28a4d505c43375446b6ada5"
+          }
+        },
+        {
+          "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxkD-RbYNfcc5feQyZASUuqNp2SVo_LNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "103104407317-4tpmuqu7v2k5er27ha6l2o3l8ckm27if.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ayoyo.ayoyo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103104407317:android:54feeb3d9e2234d578eb1c",
+        "android_client_info": {
+          "package_name": "com.emas.emasdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103104407317-78u6ftrh19l6t12m8k3dankcm6ug74j3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.emas.emasdriver",
+            "certificate_hash": "5ec2d61ff1dba0d0624894f0c60edeae02cc192b"
+          }
+        },
+        {
+          "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxkD-RbYNfcc5feQyZASUuqNp2SVo_LNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "103104407317-4tpmuqu7v2k5er27ha6l2o3l8ckm27if.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ayoyo.ayoyo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103104407317:android:05f1f3a43830147778eb1c",
+        "android_client_info": {
+          "package_name": "com.emas.emasjek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxkD-RbYNfcc5feQyZASUuqNp2SVo_LNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103104407317-1md3no3mbum3dc4jucg1ofg2uanh1ah3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "103104407317-4tpmuqu7v2k5er27ha6l2o3l8ckm27if.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ayoyo.ayoyo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
