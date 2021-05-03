@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ayoyo Merchant</string>
+    <string name="app_name">Ayoresto</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
         AIzaSyDxkD-RbYNfcc5feQyZASUuqNp2SVo_LNQ
     </string>
