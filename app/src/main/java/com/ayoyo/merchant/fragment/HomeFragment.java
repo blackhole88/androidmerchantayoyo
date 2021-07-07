@@ -161,7 +161,6 @@ public class HomeFragment extends Fragment {
             public void onResponse(Call<HomeResponseJson> call, Response<HomeResponseJson> response) {
                 if (response.isSuccessful()) {
                     if (Objects.requireNonNull(response.body()).getMessage().equalsIgnoreCase("success")) {
-                        PayuModel payu = response.body().getPayu().get(0);
                         sp.updateCurrency(response.body().getCurrency());
                         sp.updateabout(response.body().getAboutus());
                         sp.updateemail(response.body().getEmail());
@@ -172,11 +171,6 @@ public class HomeFragment extends Fragment {
                         sp.updatepaypalactive(response.body().getPaypalactive());
                         sp.updatestripeactive(response.body().getStripeactive());
                         sp.updatecurrencytext(response.body().getCurrencytext());
-                        sp.updatePayudebug(payu.getPayudebug());
-                        sp.updatePayumerchantid(payu.getPayuid());
-                        sp.updatePayusalt(payu.getPayusalt());
-                        sp.updatePayumerchantkey(payu.getPayukey());
-                        sp.updatePayuActive(payu.getActive());
                         order = response.body().getData();
                         shimmertutup();
                         Utility.currencyTXT(saldo,response.body().getSaldo(),context);
