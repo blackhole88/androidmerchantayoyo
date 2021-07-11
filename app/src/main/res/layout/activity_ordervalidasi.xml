@@ -305,18 +305,21 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:backgroundTint="@color/dark_gray"
-                            android:src="@drawable/ic_call" />
+                            android:src="@drawable/ic_call"
+                            android:visibility="gone" />
 
                         <ImageView
                             android:layout_width="10dp"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
 
                         <ImageView
                             android:id="@+id/chatbuyer"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:backgroundTint="@color/dark_gray"
-                            android:src="@drawable/ic_chats" />
+                            android:src="@drawable/ic_chats"
+                            android:visibility="gone" />
 
                     </LinearLayout>
 
