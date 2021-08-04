@@ -115,7 +115,7 @@ public class TopupSaldoActivity extends AppCompatActivity {
         payumoney = findViewById(R.id.payumoney);
         linkaja = findViewById(R.id.linkaja);
 
-        nominal.addTextChangedListener(Utility.currencyTW(nominal,this));
+        nominal.addTextChangedListener(Utility.currencyTWWithout00(nominal,this));
 
         linkaja.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -365,7 +365,7 @@ public class TopupSaldoActivity extends AppCompatActivity {
                         sendNotif(user.getToken_merchant(), notif);
 
                     } else {
-                        notif("error, please check your account data!");
+                        notif("error, Harap periksa data rekening anda");
                     }
                 } else {
                     notif("error!");

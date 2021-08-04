@@ -382,7 +382,7 @@ public class OrdervalidasiActivity extends AppCompatActivity {
                 case "4":
                     status.getBackground().setColorFilter(getResources().getColor(R.color.green), PorterDuff.Mode.SRC_ATOP);
                     status.setTextColor(getResources().getColor(R.color.green));
-                    status.setText("Finish");
+                    status.setText("Selesai");
                     break;
                 case "5":
                     status.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);

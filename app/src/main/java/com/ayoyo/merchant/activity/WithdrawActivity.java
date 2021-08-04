@@ -76,16 +76,20 @@ public class WithdrawActivity extends AppCompatActivity {
         if (Objects.equals(type, "topup")) {
             images.setImageResource(R.drawable.atm);
             images.setScaleType(ImageView.ScaleType.FIT_XY);
-            nominal = intent.getStringExtra("nominal");
+            // nominal = intent.getStringExtra("nominal");
 
-            Utility.currencyTXT(amount, Objects.requireNonNull(nominal), WithdrawActivity.this);
+            // Utility.currencyTXT(amount, Objects.requireNonNull(nominal), WithdrawActivity.this);
             petunjuk.setHasFixedSize(true);
             petunjuk.setNestedScrollingEnabled(false);
             petunjuk.setLayoutManager(new GridLayoutManager(this, 1));
             getpetunjuk();
         }
 
-        amount.addTextChangedListener(Utility.currencyTW(amount, this));
+        nominal = intent.getStringExtra("nominal");
+        if(nominal!=null) amount.setText(nominal);
+        amount.addTextChangedListener(Utility.currencyTWWithout00(amount, this));
+
+        // amount.addTextChangedListener(Utility.currencyTW(amount, this));
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,21 +103,21 @@ public class WithdrawActivity extends AppCompatActivity {
                             .replace(".", "")
                             .replace(",", "")
                             .replace(sp.getSetting()[0], "")) > userLogin.getWalletSaldo()) {
-                        notif("your balance is no enought!");
+                        notif("Saldo tidak mencukupi");
                     } else if (bank.getText().toString().isEmpty()) {
-                        notif("bank cant be empty!");
+                        notif("Bank harap diisi");
                     } else if (accnumber.getText().toString().isEmpty()) {
-                        notif("account number cant be empty!");
+                        notif("Nomor Rekening harap diisi");
                     } else {
                         submit();
                     }
                 } else {
                     if (amount.getText().toString().isEmpty()) {
-                        notif("amount cant be empty!");
+                        notif("Nominal harap diisi");
                     } else if (bank.getText().toString().isEmpty()) {
-                        notif("bank cant be empty!");
+                        notif("Bank harap diisi");
                     } else if (accnumber.getText().toString().isEmpty()) {
-                        notif("account number cant be empty!");
+                        notif("Nomor Rekening harap diisi");
                     } else {
                         submit();
                     }
@@ -157,15 +161,17 @@ public class WithdrawActivity extends AppCompatActivity {
                         Notif notif = new Notif();
                         if (type.equals("withdraw")) {
                             notif.title = "Withdraw";
-                            notif.message = "Withdrawal requests have been successful, we will send a notification after we have sent funds to your account";
+                            // notif.message = "Withdrawal requests have been successful, we will send a notification after we have sent funds to your account";
+                            notif.message = "Permintaan penarikan sukses, kami akan segeram mengirimkan notifikasi";
                         } else {
                             notif.title = "Topup";
-                            notif.message = "Topup requests have been successful, we will send a notification after we confirm";
+                            notif.message = "Permintaan topup sukses, kami akan segeram mengirimkan notifikasi";
+                            // notif.message = "Topup requests have been successful, we will send a notification after we confirm";
                         }
                         sendNotif(user.getToken_merchant(), notif);
 
                     } else {
-                        notif("error, please check your account data!");
+                        notif("error, Harap periksa data rekening anda");
                     }
                 } else {
                     notif("error!");

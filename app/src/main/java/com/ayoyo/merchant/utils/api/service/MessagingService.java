@@ -303,7 +303,7 @@ public class MessagingService extends FirebaseMessagingService {
 
         mBuilder.setContentIntent(pIntent1);
         mBuilder.setSmallIcon(R.drawable.logo);
-        mBuilder.setContentTitle("Finish");
+        mBuilder.setContentTitle("Selesai");
         mBuilder.setContentText(remoteMessage.getData().get("desc"));
         mBuilder.setPriority(Notification.PRIORITY_MAX);
         mBuilder.setAutoCancel(true);
