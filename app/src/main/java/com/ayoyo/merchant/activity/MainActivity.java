@@ -13,8 +13,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.ayoyo.merchant.json.UpdateTokenRequestJson;
+import com.ayoyo.merchant.json.UpdateTokenResponseJson;
+import com.ayoyo.merchant.utils.api.ServiceGenerator;
+import com.ayoyo.merchant.utils.api.service.MerchantService;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.ayoyo.merchant.R;
@@ -27,6 +33,7 @@ import com.ayoyo.merchant.fragment.MenuFragment;
 import com.ayoyo.merchant.fragment.MessageFragment;
 import com.ayoyo.merchant.fragment.SettingsFragment;
 import com.ayoyo.merchant.models.User;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 
 import java.util.Objects;
@@ -34,6 +41,11 @@ import java.util.Objects;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import io.realm.Realm;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -50,6 +62,47 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView navigation;
     int previousSelect = 0;
 
+    private void tes(){
+//        try {
+//            User loginUser = BaseApp.getInstance(getApplicationContext()).getLoginUser();
+//
+//            UpdateTokenRequestJson requestJson = new UpdateTokenRequestJson();
+//            String phoneNumber = loginUser.getNoTelepon();
+//            requestJson.setNotelepon(phoneNumber);
+//            requestJson.setRegId(FirebaseInstanceId.getInstance().getToken());
+//
+//            MerchantService service = ServiceGenerator.createService(MerchantService.class);
+//            service.updatetoken(requestJson).enqueue(new Callback<UpdateTokenResponseJson>() {
+//                @Override
+//                public void onResponse(Call<UpdateTokenResponseJson> call, Response<UpdateTokenResponseJson> response) {
+//
+//                    System.out.println(response);
+//                    if (response.isSuccessful()) {
+//                        if (Objects.requireNonNull(response.body()).getMessage().equalsIgnoreCase("found")) {
+//                            User user = response.body().getData().get(0);
+//                            saveUser(user);
+//                        }
+//                    }
+//                }
+//                @Override
+//                public void onFailure(Call<UpdateTokenResponseJson> call, Throwable t) {
+//
+//                }
+//            });
+//        }
+//        catch (Exception e){
+//            e.printStackTrace();
+//        }
+    }
+
+    private void saveUser(User user) {
+        Realm realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+        realm.delete(User.class);
+        realm.copyToRealm(user);
+        realm.commitTransaction();
+        BaseApp.getInstance(this).setLoginUser(user);
+    }
 
     public static MainActivity getInstance() {
         return mainActivity;
@@ -107,10 +160,12 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    ImageView ivtes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ivtes = findViewById(R.id.ivtes);
         mAdViewLayout = findViewById(R.id.adView);
         fragmentManager = getSupportFragmentManager();
         navigation = findViewById(R.id.navigation);
@@ -124,6 +179,13 @@ public class MainActivity extends AppCompatActivity {
         User loginUser = BaseApp.getInstance(this).getLoginUser();
         Constants.USERID = loginUser.getId();
         apikey = getString(R.string.google_maps_key);
+
+        ivtes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tes();
+            }
+        });
 
         PackageInfo packageInfo = null;
         try {

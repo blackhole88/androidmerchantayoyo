@@ -12,6 +12,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Vibrator;
 
+import com.ayoyo.merchant.activity.OtpSmsActivity2;
+import com.ayoyo.merchant.json.LoginRequestJson;
+import com.ayoyo.merchant.json.LoginResponseJson;
+import com.ayoyo.merchant.json.UpdateTokenRequestJson;
+import com.ayoyo.merchant.json.UpdateTokenResponseJson;
+import com.ayoyo.merchant.utils.api.ServiceGenerator;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 import com.ayoyo.merchant.R;
@@ -28,10 +35,16 @@ import org.greenrobot.eventbus.EventBus;
 import java.util.Map;
 import java.util.Objects;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK;
 import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
+import io.realm.Realm;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Ourdevelops Team on 10/13/2019.
@@ -51,6 +64,50 @@ public class MessagingService extends FirebaseMessagingService {
         intentOrder = new Intent(BROADCAST_ORDER);
     }
 
+    @Override
+    public void onNewToken(@NonNull String s) {
+        super.onNewToken(s);
+
+        try {
+            User loginUser = BaseApp.getInstance(getApplicationContext()).getLoginUser();
+
+            UpdateTokenRequestJson requestJson = new UpdateTokenRequestJson();
+            String phoneNumber = loginUser.getNoTelepon();
+            requestJson.setNotelepon(phoneNumber);
+            requestJson.setRegId(s);
+
+            MerchantService service = ServiceGenerator.createService(MerchantService.class);
+            service.updatetoken(requestJson).enqueue(new Callback<UpdateTokenResponseJson>() {
+                @Override
+                public void onResponse(Call<UpdateTokenResponseJson> call, Response<UpdateTokenResponseJson> response) {
+
+                    System.out.println(response);
+                    if (response.isSuccessful()) {
+                        if (Objects.requireNonNull(response.body()).getMessage().equalsIgnoreCase("found")) {
+                            User user = response.body().getData().get(0);
+                            saveUser(user);
+                        }
+                    }
+                }
+                @Override
+                public void onFailure(Call<UpdateTokenResponseJson> call, Throwable t) {
+
+                }
+            });
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    private void saveUser(User user) {
+        Realm realm = Realm.getDefaultInstance();
+        realm.beginTransaction();
+        realm.delete(User.class);
+        realm.copyToRealm(user);
+        realm.commitTransaction();
+        BaseApp.getInstance(this).setLoginUser(user);
+    }
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -232,7 +289,7 @@ public class MessagingService extends FirebaseMessagingService {
 
         mBuilder.setContentIntent(pIntent1);
         mBuilder.setSmallIcon(R.drawable.logo);
-        mBuilder.setContentTitle("Driver Start");
+        mBuilder.setContentTitle("Pengemudi Berangkat");
         mBuilder.setContentText(remoteMessage.getData().get("desc"));
         mBuilder.setPriority(Notification.PRIORITY_MAX);
         mBuilder.setAutoCancel(true);

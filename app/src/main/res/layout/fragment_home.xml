@@ -148,11 +148,12 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center">
+
                             <ImageView
                                 android:id="@+id/icdetail"
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
-                                android:src="@drawable/ic_detailwallet"/>
+                                android:src="@drawable/ic_detailwallet" />
 
                             <customfonts.TextViewSFProDisplayMedium
                                 android:layout_below="@id/icdetail"

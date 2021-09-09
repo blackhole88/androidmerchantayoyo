@@ -36,6 +36,8 @@ import com.ayoyo.merchant.json.RegisterResponseJson;
 import com.ayoyo.merchant.json.ResponseJson;
 import com.ayoyo.merchant.json.TopupRequestJson;
 import com.ayoyo.merchant.json.TopupResponseJson;
+import com.ayoyo.merchant.json.UpdateTokenRequestJson;
+import com.ayoyo.merchant.json.UpdateTokenResponseJson;
 import com.ayoyo.merchant.json.WalletRequestJson;
 import com.ayoyo.merchant.json.WalletResponseJson;
 import com.ayoyo.merchant.json.WithdrawRequestJson;
@@ -178,5 +180,8 @@ public interface MerchantService {
 
     @POST("merchant/changepass")
     Call<LoginResponseJson> changepass(@Body ChangePassRequestJson param);
+
+    @POST("merchant/updatetoken")
+    Call<UpdateTokenResponseJson> updatetoken(@Body UpdateTokenRequestJson param);
 
 }

@@ -63,7 +63,8 @@ public class WalletItem extends RecyclerView.Adapter<WalletItem.ItemRowHolder> {
                     holder.text.setTextColor(mContext.getResources().getColor(R.color.red));
                     holder.nominal.setTextColor(mContext.getResources().getColor(R.color.red));
                     holder.background.setColorFilter(mContext.getResources().getColor(R.color.red));
-                    holder.keterangan.setText("Money Out");
+//                    holder.keterangan.setText("Money Out");
+                    holder.keterangan.setText("Pengeluaran");
                     break;
                 case "0":
                     holder.text.setTextColor(mContext.getResources().getColor(R.color.yellow));
@@ -75,7 +76,8 @@ public class WalletItem extends RecyclerView.Adapter<WalletItem.ItemRowHolder> {
                     holder.text.setTextColor(mContext.getResources().getColor(R.color.gray));
                     holder.nominal.setTextColor(mContext.getResources().getColor(R.color.gray));
                     holder.background.setColorFilter(mContext.getResources().getColor(R.color.gray));
-                    holder.keterangan.setText("Canceled");
+//                    holder.keterangan.setText("Canceled");
+                    holder.keterangan.setText("Dibatalkan");
                     break;
             }
 
@@ -88,7 +90,8 @@ public class WalletItem extends RecyclerView.Adapter<WalletItem.ItemRowHolder> {
                     holder.text.setTextColor(mContext.getResources().getColor(R.color.red));
                     holder.nominal.setTextColor(mContext.getResources().getColor(R.color.red));
                     holder.background.setColorFilter(mContext.getResources().getColor(R.color.red));
-                    holder.keterangan.setText("Money Out");
+//                    holder.keterangan.setText("Money Out");
+                    holder.keterangan.setText("Pengeluaran");
                     break;
                 case "0":
                     holder.text.setTextColor(mContext.getResources().getColor(R.color.yellow));
@@ -100,7 +103,8 @@ public class WalletItem extends RecyclerView.Adapter<WalletItem.ItemRowHolder> {
                     holder.text.setTextColor(mContext.getResources().getColor(R.color.gray));
                     holder.nominal.setTextColor(mContext.getResources().getColor(R.color.gray));
                     holder.background.setColorFilter(mContext.getResources().getColor(R.color.gray));
-                    holder.keterangan.setText("Canceled");
+//                    holder.keterangan.setText("Canceled");
+                    holder.keterangan.setText("Dibatalkan");
                     break;
             }
 
@@ -110,7 +114,8 @@ public class WalletItem extends RecyclerView.Adapter<WalletItem.ItemRowHolder> {
             holder.text.setTextColor(mContext.getResources().getColor(R.color.green));
             holder.nominal.setTextColor(mContext.getResources().getColor(R.color.green));
             holder.background.setColorFilter(mContext.getResources().getColor(R.color.green));
-            holder.keterangan.setText("Money In");
+//            holder.keterangan.setText("Money In");
+            holder.keterangan.setText("Pemasukan");
 
         } else if (singleItem.getType().equals("topup") && singleItem.getStatus().equals("2")) {
             Utility.currencyTXT(holder.nominal, singleItem.getJumlah(), mContext);
@@ -118,7 +123,8 @@ public class WalletItem extends RecyclerView.Adapter<WalletItem.ItemRowHolder> {
             holder.text.setTextColor(mContext.getResources().getColor(R.color.gray));
             holder.nominal.setTextColor(mContext.getResources().getColor(R.color.gray));
             holder.background.setColorFilter(mContext.getResources().getColor(R.color.gray));
-            holder.keterangan.setText("Canceled");
+//            holder.keterangan.setText("Canceled");
+            holder.keterangan.setText("Dibatalkan");
 
         } else if (singleItem.getType().equals("topup") && singleItem.getStatus().equals("0")) {
             Utility.currencyTXT(holder.nominal, singleItem.getJumlah(), mContext);
@@ -134,7 +140,8 @@ public class WalletItem extends RecyclerView.Adapter<WalletItem.ItemRowHolder> {
             holder.text.setTextColor(mContext.getResources().getColor(R.color.green));
             holder.nominal.setTextColor(mContext.getResources().getColor(R.color.green));
             holder.background.setColorFilter(mContext.getResources().getColor(R.color.green));
-            holder.keterangan.setText("Money Out");
+//            holder.keterangan.setText("Money Out");
+            holder.keterangan.setText("Pengeluaran");
 
         } else {
             holder.background.setColorFilter(mContext.getResources().getColor(R.color.yellow));
